@@ -41,18 +41,37 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        app:boxedEdges="all">
 
-        <ImageButton
-            android:id="@+id/button2"
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:fitsSystemWindows="true"
-            android:paddingEnd="15dp"
-            android:src="@drawable/ic_loop_black_24dp"
-            android:text="Button" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button2"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:paddingEnd="15dp"
+                android:src="@drawable/ic_loop_black_24dp"
+                android:text="Button" />
+
+            <ImageButton
+                android:id="@+id/send_button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_send_black_24dp"
+                android:text="Button" />
+        </LinearLayout>
+
     </FrameLayout>
 
 </android.support.wear.widget.BoxInsetLayout>
