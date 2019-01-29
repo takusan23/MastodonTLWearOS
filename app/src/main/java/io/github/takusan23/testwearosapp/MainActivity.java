@@ -60,9 +60,6 @@ public class MainActivity extends WearableActivity implements MessageClient.OnMe
 
     //データ受け渡し
     //https://github.com/JimSeker/wearable
-    int num = 1;
-    String datapath = "/message_path";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,18 +148,12 @@ public class MainActivity extends WearableActivity implements MessageClient.OnMe
     //受け取り
     @Override
     public void onMessageReceived(@NonNull MessageEvent messageEvent) {
-        if (messageEvent.getPath().equals("/message_path")) {  //don't think this if is necessary anymore.
+        //sendMessage var1 にいれた名前をequalsに入れる
+        if (messageEvent.getPath().equals("/message")) {
             String message = new String(messageEvent.getData());
-            // Log.v(TAG, "Wear activity received message: " + message);
             // とーすと
             Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
-            //here, send a message back.
-            message = "Hello device " + num;
-/*
-            //Requires a new thread to avoid blocking the UI
-            new SendThread(datapath, message).start();
-*/
-            num++;
+
         }
     }
 }
