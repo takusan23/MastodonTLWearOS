@@ -3,9 +3,10 @@
     package="io.github.takusan23.testwearosapp">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +14,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
-
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
+
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -25,6 +26,10 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
+        <activity
+            android:name=".TootActivity"
+            android:label="@string/title_activity_toot">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
