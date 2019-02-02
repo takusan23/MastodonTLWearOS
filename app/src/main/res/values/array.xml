@@ -1,0 +1,12 @@
+<resources>
+    <string-array name="planets_array_names">
+        <item>mercury</item>
+        <item>venus</item>
+        <item>earth</item>
+        <item>mars</item>
+        <item>jupiter</item>
+        <item>saturn</item>
+        <item>uranus</item>
+        <item>neptune</item>
+    </string-array>
+</resources>
